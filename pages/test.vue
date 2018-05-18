@@ -26,7 +26,7 @@ export default {
   // }),
   async asyncData ({ req, params, env }) {
     let name = req ? 'server' : 'client'
-    // tem como usar await aqui
+    // use await here if you make a request
     return { name }
   },
   // head: {

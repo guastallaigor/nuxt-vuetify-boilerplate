@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  node:
+    image: node:8-alpine
+    volumes:
+      - .:/code
+    working_dir: /code
+    ports:
+      - 3000:3000
+    command: npm run dev
+
+  # NGINX
+  app:
+    image: nginx:stable-alpine
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    ports:
+      - 82:80
+    links:
+      - node

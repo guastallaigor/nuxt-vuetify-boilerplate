@@ -1,7 +1,7 @@
 {
-  "name": "nuxt",
+  "name": "nuxt-vuetify-boilerplate",
   "version": "1.0.0",
-  "description": "Nuxt.js + Vuetify.js project",
+  "description": "Nuxtjs + Vuetify boilerplate",
   "author": "Igor Lima <igor.lima@uds.com.br>",
   "private": true,
   "scripts": {

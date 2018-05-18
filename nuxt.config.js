@@ -23,6 +23,12 @@ module.exports = {
     '~/assets/style/app.styl'
   ],
   /*
+  ** Router
+  */
+  router: {
+    linkActiveClass: 'active-link'
+  },
+  /*
   ** Env example
   */
   env: {
