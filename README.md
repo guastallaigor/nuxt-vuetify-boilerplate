@@ -1,10 +1,10 @@
 <div align="center">
   <img src="/static/nuxt-vuetify.png" width="128px">
-  <h1>Nuxt Boilerplate</h1>
+  <h1>Nuxt Vuetify Boilerplate</h1>
 </div>
 
 <p align="center">
-  Nuxt Boilerplate is a <a href="https://vuetifyjs.com/">Vuetify</a> and <a href="https://github.com/nuxt/nuxt.js">Nuxt.js</a> boilerplate with a lot of features to start development your future projects faster.
+  Nuxt Vuetify Boilerplate is a <a href="https://vuetifyjs.com/">Vuetify</a> and <a href="https://github.com/nuxt/nuxt.js">Nuxt.js</a> boilerplate with a lot of features to start development your future projects faster.
 </p>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/guastallaigor/hare/master/LICENSE)
