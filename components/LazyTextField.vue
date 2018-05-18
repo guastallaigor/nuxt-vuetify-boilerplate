@@ -23,7 +23,7 @@ export default {
     },
     label: {
       type: String,
-      default: 'Buscar'
+      default: 'Search'
     },
     icon: {
       type: String,

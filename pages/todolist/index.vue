@@ -49,6 +49,7 @@
           :items="items"
           no-data-text="Nothing to do"
           no-results-text="Nothing to do"
+          :rows-per-page-items="rowsPerPageItems"
         )
           template(
             slot="items"
@@ -89,6 +90,7 @@ export default {
     return { items: data }
   },
   data: () => ({
+    rowsPerPageItems: [15, 25, 50, { 'text': 'All', 'value': -1 }],
     items: [],
     searchTerm: '',
     headers: [
