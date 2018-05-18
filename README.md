@@ -17,6 +17,7 @@
 * [Docker](https://github.com/docker)
 * [Express](https://github.com/expressjs/express)
 * [Axios](https://github.com/nuxt-community/axios-module)
+* [VueSwal](https://github.com/anteriovieira/vue-swal)
 * Examples
 
 #### Code Style Recommended

@@ -12,7 +12,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "express": "^4.16.3",
+    "moment": "^2.22.1",
     "nuxt": "^1.0.0",
+    "vue-swal": "^0.1.0",
     "vuetify": "^1.0.0"
   },
   "devDependencies": {

@@ -77,7 +77,8 @@ export default {
     items: [
       { icon: 'apps', title: 'Welcome', to: '/' },
       { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' },
-      { icon: 'dashboard', title: 'Test', to: '/test' }
+      { icon: 'dashboard', title: 'Test', to: '/test' },
+      { icon: 'account_circle', title: 'TODO List', to: '/todolist' }
     ],
     miniVariant: false,
     right: true,

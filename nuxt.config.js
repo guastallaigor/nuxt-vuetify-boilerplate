@@ -15,7 +15,11 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: [
+    '~/plugins/vuetify.js',
+    '~/plugins/vue-swal.js',
+    '~/plugins/axios.js'
+  ],
   css: [
     '~/assets/style/app.styl'
   ],
@@ -33,6 +37,12 @@ module.exports = {
     ]
   },
   /*
+  ** Modules
+  */
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
@@ -41,7 +51,8 @@ module.exports = {
   */
   build: {
     vendor: [
-      '~/plugins/vuetify.js'
+      '~/plugins/vuetify.js',
+      'vue-swal'
     ],
     extractCSS: true,
     /*
