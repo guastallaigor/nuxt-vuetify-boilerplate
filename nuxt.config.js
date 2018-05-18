@@ -17,8 +17,7 @@ module.exports = {
   },
   plugins: [
     '~/plugins/vuetify.js',
-    '~/plugins/vue-swal.js',
-    '~/plugins/axios.js'
+    '~/plugins/vue-swal.js'
   ],
   css: [
     '~/assets/style/app.styl'
