@@ -11,21 +11,18 @@ class TODOService {
   get uri () {
     return this._uri
   }
-  async getList () {
+  async getList (params) {
     // await sleep(5000)
-    return axios.get(this.uri)
+    return axios.get(this.uri, { params })
   }
   async deleteTODO (id) {
-    console.log(id, ':delete')
     return axios.delete(`${this.uri}/${id}`)
   }
   async editTODO (item) {
-    console.log(item, ':edit')
     const params = { todo: item.todo }
     return axios.put(`${this.uri}/${item.id}`, params)
   }
   async saveTODO (item) {
-    console.log(item, ':save')
     const params = { todo: item.todo }
     return axios.post(`${this.uri}`, params)
   }

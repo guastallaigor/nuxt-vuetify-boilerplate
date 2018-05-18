@@ -47,6 +47,8 @@
         v-data-table.elevation-1(
           :headers="headers"
           :items="items"
+          no-data-text="Nothing to do"
+          no-results-text="Nothing to do"
         )
           template(
             slot="items"
@@ -78,8 +80,12 @@ export default {
   head: () => ({
     title: 'TODO List'
   }),
-  async asyncData ({ app }) {
-    let { data } = await TODOService.getList()
+  async asyncData ({ query }) {
+    const params = {
+      search: query.search || ''
+    }
+    const { data } = await TODOService.getList(params)
+
     return { items: data }
   },
   data: () => ({
@@ -100,10 +106,8 @@ export default {
     options: {
       title: 'Confirmation',
       text: 'Are you sure?',
-      type: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No'
+      icon: 'warning',
+      buttons: true
     }
   }),
   computed: {
@@ -113,8 +117,13 @@ export default {
   },
   methods: {
     reloadData () {
+      let params = {}
+      if (this.searchTerm) {
+        params.search = this.searchTerm
+      }
+
       TODOService
-        .getList()
+        .getList(params)
         .then(({ data }) => {
           this.items = data
         })
@@ -149,37 +158,51 @@ export default {
     deleteItem (id) {
       this
         .$swal(this.options)
-        .then(() => {
-          this.requestDelete(id)
+        .then((willDelete) => {
+          if (willDelete) {
+            this.requestDelete(id)
+          }
         })
     },
     requestDelete (id) {
       TODOService
         .deleteTODO(id)
         .then(() => {
-          this.$swal('Removed!', 'Success', 'success')
-          this.reloadData()
-        }, () => {})
+          this.success('Removed!')
+        })
     },
     requestPut () {
       TODOService
         .editTODO(this.editedItem)
         .then(() => {
-          this.$swal('Edited!', 'Success', 'success')
-          this.reloadData()
-        }, () => {})
+          this.success('Edited')
+        })
     },
     requestPost () {
       TODOService
         .saveTODO(this.editedItem)
         .then(() => {
-          this.$swal('Saved!', 'Success', 'success')
-          this.reloadData()
-        }, () => {})
+          this.success('Saved!')
+        })
+    },
+    success (message) {
+      this.$swal(message, 'Success', 'success')
+      this.reloadData()
     }
   },
-  watchQuery: [
-    'searchTerm'
-  ]
+  watch: {
+    searchTerm (newValue) {
+      const search = newValue
+
+      this
+        .$router
+        .push({
+          name: 'todolist',
+          query: { search }
+        })
+
+      this.reloadData()
+    }
+  }
 }
 </script>
