@@ -1,9 +1,8 @@
 process.env.NODE_ENV = process.env.NODE_ENV
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
-process.env.HOST = process.env.HOST || '0.0.0.0'
-process.env.PORT = process.env.PORT || 3000
 
-// const bodyParser = require('body-parser')
+const host = process.env.HOST || '0.0.0.0'
+const port = process.env.PORT || 3003
 const app = require('express')()
 const { existsSync } = require('fs')
 const { resolve } = require('path')
@@ -33,4 +32,5 @@ if (config.dev) {
 app.use(nuxt.render)
 
 // Start express server
-app.listen(process.env.PORT, process.env.HOST)
+app.listen(port, host)
+console.log('Server listening on http://' + host + ':' + port)

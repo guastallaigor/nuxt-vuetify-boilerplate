@@ -57,6 +57,7 @@ module.exports = {
   build: {
     vendor: [
       '~/plugins/vuetify.js',
+      'axios',
       'vue-swal'
     ],
     extractCSS: true,
@@ -64,6 +65,16 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, ctx) {
+      // find the stylus loader
+      let stylus = config.module.rules[0].options.loaders.stylus.find(e => e.loader == 'stylus-loader')
+
+      // extend default options
+      Object.assign(stylus.options, {
+        import: [
+          '~rupture/rupture/index.styl',
+        ]
+      })
+
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

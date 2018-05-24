@@ -18,7 +18,8 @@
 * [Express](https://github.com/expressjs/express)
 * [Axios](https://github.com/nuxt-community/axios-module)
 * [VueSwal](https://github.com/anteriovieira/vue-swal)
-* Examples
+* [Rupture](https://github.com/jescalan/rupture)
+* CRUD Example other ones
 
 #### Code Style Recommended
 
@@ -29,8 +30,8 @@
 * [ ] Add more Store examples.
 * [ ] Add AVA examples.
 * [ ] Add axios examples.
-* [ ] Add CRUD example.
-* [ ] Add docker-compose.yml.
+* [X] Add CRUD example.
+* [X] Add docker-compose.yml.
 * [ ] Add more dependencies.
 
 ## License
