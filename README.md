@@ -19,7 +19,7 @@
 * [Axios](https://github.com/nuxt-community/axios-module)
 * [VueSwal](https://github.com/anteriovieira/vue-swal)
 * [Rupture](https://github.com/jescalan/rupture)
-* CRUD Example other ones
+* CRUD Example and other ones
 
 #### Code Style Recommended
 
