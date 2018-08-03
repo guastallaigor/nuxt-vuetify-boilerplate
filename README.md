@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./template/static/nuxt-vuetify.png" width="128px">
+  <img src="./template/static/img/nuxt-vuetify.png" width="128px">
   <h1>Nuxt Vuetify Boilerplate</h1>
 </div>
 
