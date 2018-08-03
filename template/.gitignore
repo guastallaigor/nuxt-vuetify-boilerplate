@@ -3,12 +3,18 @@ node_modules
 
 # logs
 npm-debug.log
+yarn-error.log
 
 # Nuxt build
 .nuxt
 
 # Nuxt generate
 dist
+cordova
 
+# locks
 package-lock.json
 yarn.lock
+yarn-error\.log
+
+\.env\.js

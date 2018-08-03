@@ -2,7 +2,7 @@
   v-layout(column="" justify-center="" align-center="")
     v-flex(xs12="" sm8="" md6="")
       .text-xs-center
-        img.mb-5(src="/v.png" alt="Vuetify.js")
+        img.mb-5(src="/img/v.png" alt="Vuetify.js")
       v-card
         v-card-title.headline Welcome to the Vuetify + Nuxt.js template
         v-card-text

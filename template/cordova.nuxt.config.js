@@ -1,5 +1,7 @@
+const env = require('./.env.js')
 
 module.exports = {
+  mode : 'spa',
   /*
   ** Headers of the page
   */
@@ -8,10 +10,12 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt Vuetify Boilerplate' }
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'theme-color', content: '#000000' },
+      { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1, minimal-ui, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
@@ -24,17 +28,8 @@ module.exports = {
   css: [
     '~/assets/style/app.styl'
   ],
-  /*
-  ** Router
-  */
-  router: {
-    linkActiveClass: 'active-link'
-  },
-  /*
-  ** Modules
-  */
   modules: [
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   axios: {
     baseURL: env.BASE_API_URL
@@ -50,21 +45,23 @@ module.exports = {
     vendor: [
       '~/plugins/vuetify.js',
       'axios',
-      'vue-swal',
-      '~/plugins/vue-env.js'
+      '~/plugins/vue-env.js',
+      '~/plugins/vue-swal',
+      '~/plugins/vue-cordova.js'
     ],
     extractCSS: true,
+    publicPath : '/nuxt/',
     /*
     ** Run ESLint on save
     */
     extend (config, ctx) {
       // find the stylus loader
-      let stylus = config.module.rules[0].options.loaders.stylus.find(e => e.loader == 'stylus-loader')
+      let stylus = config.module.rules[0].options.loaders.stylus.find(e => e.loader === 'stylus-loader')
 
       // extend default options
       Object.assign(stylus.options, {
         import: [
-          '~rupture/rupture/index.styl',
+          '~rupture/rupture/index.styl'
         ]
       })
 
@@ -80,5 +77,8 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    dir: 'cordova'
   }
 }

@@ -3,3 +3,37 @@
 
 .page
   @extend .fade-transition
+
+// swal
+$rgb170 = rgb(170, 170, 170)
+$red = #f44336
+$helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.swal-title
+  margin 0px
+  font-size 28px
+  font-weight bold
+  text-align center
+  font-family $helvetica
+
+.swal-button--yes, .swal-button--cancel, .swal-button--confirm
+  border-radius 2px
+  font-size 14px
+  font-family $helvetica
+  text-align center
+
+.swal-button--cancel
+  border 1px solid $rgb170
+  background-color $rgb170
+  color #FFFFFF
+
+.swal-button--yes, .swal-button--confirm
+  border 1px solid $red
+  background-color $red
+
+.swal-footer
+  text-align center
+
+.swal-text
+  font-size 16px
+//fim swal

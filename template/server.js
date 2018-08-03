@@ -7,6 +7,12 @@ const app = require('express')()
 const { existsSync } = require('fs')
 const { resolve } = require('path')
 const { Nuxt, Builder } = require('nuxt')
+const env = require('./.env.js')
+
+if (!env) {
+  console.error('> No .env file found. Please create one!')
+  process.exit(1)
+}
 
 // Import and set Nuxt.js options
 let config = require('./nuxt.config')

@@ -1,8 +1,4 @@
-import axios from 'axios'
-
-// const sleep = () => {
-//   return new Promise(resolve => setTimeout(resolve, ms));
-// }
+import Axios from './axios-module'
 
 class TODOService {
   constructor () {
@@ -12,19 +8,18 @@ class TODOService {
     return this._uri
   }
   async getList (params) {
-    // await sleep(5000)
-    return axios.get(this.uri, { params })
+    return Axios.http.get(this.uri, { params })
   }
   async deleteTODO (id) {
-    return axios.delete(`${this.uri}/${id}`)
+    return Axios.http.delete(`${this.uri}/${id}`)
   }
   async editTODO (item) {
     const params = { todo: item.todo }
-    return axios.put(`${this.uri}/${item.id}`, params)
+    return Axios.http.put(`${this.uri}/${item.id}`, params)
   }
   async saveTODO (item) {
     const params = { todo: item.todo }
-    return axios.post(`${this.uri}`, params)
+    return Axios.http.post(`${this.uri}`, params)
   }
 }
 
