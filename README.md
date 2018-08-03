@@ -12,14 +12,33 @@
 ## Features
 
 * [Pugjs](https://pugjs.org/api/getting-started.html)
-* [AVA](https://github.com/avajs/ava)
 * [Stylus](http://stylus-lang.com/)
 * [Docker](https://github.com/docker)
 * [Express](https://github.com/expressjs/express)
 * [Axios](https://github.com/nuxt-community/axios-module)
-* [VueSwal](https://github.com/anteriovieira/vue-swal)
+* [Vue-Swal](https://github.com/anteriovieira/vue-swal)
 * [Rupture](https://github.com/jescalan/rupture)
-* CRUD Example and other ones
+* [Cordova](https://cordova.apache.org/)
+* .Env configuration
+* CRUD example
+
+## How to use
+
+It's recommended that you use `docker-compose`. The commands commonly used are:
+
+1. `docker-compose run node sh` (Enter inside the docker container);
+2. `docker-compose up node` (Up container);
+3. `docker-compose up down` (Drop container);
+
+Also, it's better to run all npm's commands inside the container.
+
+## Cordova - App
+
+To generate the cordova build, just follow this steps:
+
+1. Enter in the docker container with `docker-compose run node sh`;
+2. Run `npm run cordova`;
+3. Wait until it's finished, then check if the `cordova` folder has been created on the root project directory.
 
 #### Code Style Recommended
 
@@ -27,12 +46,12 @@
 
 ### TODO
 
-* [ ] Add more Store examples.
-* [ ] Add AVA examples.
-* [ ] Add axios examples.
 * [X] Add CRUD example.
 * [X] Add docker-compose.yml.
+* [X] Add axios examples.
+* [ ] Add more Store examples.
 * [ ] Add more dependencies.
+* [ ] Add open API to replace mockAPI.
 
 ## License
 
