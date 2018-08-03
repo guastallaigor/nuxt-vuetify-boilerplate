@@ -2,7 +2,7 @@ import Axios from './axios-module'
 
 class TODOService {
   constructor () {
-    this._uri = 'https://5afee70fd0cc5b001479bfbc.mockapi.io/todolistcrud'
+    this._uri = 'todolistcrud'
   }
   get uri () {
     return this._uri

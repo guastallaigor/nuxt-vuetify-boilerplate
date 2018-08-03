@@ -1,6 +1,6 @@
 {
   "name": "nuxt-vuetify-boilerplate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Nuxtjs + Vuetify boilerplate",
   "author": "Igor Lima <igor.lima@uds.com.br>",
   "private": true,
@@ -15,6 +15,7 @@
     "express": "^4.16.3",
     "nuxt": "^1.0.0",
     "rupture": "^0.7.1",
+    "vue-loader": "^13.7.2",
     "vue-swal": "^0.1.0",
     "vuetify": "^1.0.0"
   },

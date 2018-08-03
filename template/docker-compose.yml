@@ -7,8 +7,8 @@ services:
       - .:/code
     working_dir: /code
     ports:
-      - 3000:3000
-    command: yarn run dev
+      - 3003:3003
+    command: npm run dev
 
   # NGINX
   app:

@@ -22,8 +22,7 @@ module.exports = {
   plugins: [
     '~/plugins/vuetify.js',
     { src: '~/plugins/vue-swal.js', ssr: false },
-    '~/plugins/vue-env.js',
-    '~/plugins/vue-cordova.js'
+    '~/plugins/vue-env.js'
   ],
   css: [
     '~/assets/style/app.styl'
@@ -46,8 +45,7 @@ module.exports = {
       '~/plugins/vuetify.js',
       'axios',
       '~/plugins/vue-env.js',
-      '~/plugins/vue-swal',
-      '~/plugins/vue-cordova.js'
+      '~/plugins/vue-swal'
     ],
     extractCSS: true,
     publicPath : '/nuxt/',

@@ -1,3 +1,4 @@
+const env = require('./.env.js')
 
 module.exports = {
   /*
@@ -11,15 +12,14 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt Vuetify Boilerplate' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
   plugins: [
     '~/plugins/vuetify.js',
     { src: '~/plugins/vue-swal.js', ssr: false },
-    '~/plugins/vue-env.js',
-    '~/plugins/vue-cordova.js'
+    '~/plugins/vue-env.js'
   ],
   css: [
     '~/assets/style/app.styl'
